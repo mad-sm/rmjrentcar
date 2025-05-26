@@ -157,7 +157,7 @@
           return;
         }
         try {
-          const res = await fetch(`http://localhost:5000/cars/detail/${carId}`);
+          const res = await fetch(`https://rmjrentcar-86067911510.asia-southeast2.run.app/cars/detail/${carId}`);
           if (!res.ok) throw new Error("Gagal mengambil data mobil");
           const data = await res.json();
           const car = data[0];
@@ -193,7 +193,7 @@
         };
         try {
           const res = await fetch(
-            `http://localhost:5000/cars/update/${carId}`,
+            `https://rmjrentcar-86067911510.asia-southeast2.run.app/cars/update/${carId}`,
             {
               method: "PUT",
               headers: { "Content-Type": "application/json" },
