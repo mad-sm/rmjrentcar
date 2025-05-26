@@ -21,8 +21,14 @@ steps:
         "managed",
         "--allow-unauthenticated",
       ]
+<<<<<<< HEAD
       
 options:
   logging: CLOUD_LOGGING_ONLY
   
+=======
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+>>>>>>> aad2579 (fix)
 timeout: "3000s"
