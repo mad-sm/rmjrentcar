@@ -1,12 +1,12 @@
 FROM node:18-alpine
-
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm install --omit=dev  # hapus dependency dev seperti nodemon
 
 COPY . .
 
+ENV PORT=5000
 EXPOSE 5000
 
-CMD ["npm", "start"]
+CMD ["node", "index.js"]
