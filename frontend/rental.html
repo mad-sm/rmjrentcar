@@ -70,13 +70,13 @@
       if (!user) window.location.href = "index.html";
 
       async function fetchCar() {
-        const res = await fetch(`http://localhost:5000/cars/detail/${carId}`);
+        const res = await fetch(`https://rmjrentcar-86067911510.asia-southeast2.run.app/cars/detail/${carId}`);
         const data = await res.json();
         return data[0];
       }
 
       async function fetchRentals() {
-        const res = await fetch("http://localhost:5000/rentals");
+        const res = await fetch("https://rmjrentcar-86067911510.asia-southeast2.run.app/rentals");
         return await res.json();
       }
 
@@ -182,7 +182,7 @@
             status: "reserved",
           };
           try {
-            const res = await fetch("http://localhost:5000/rentals/create", {
+            const res = await fetch("https://rmjrentcar-86067911510.asia-southeast2.run.app/rentals/create", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(body),
