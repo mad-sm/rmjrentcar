@@ -76,11 +76,11 @@
       const userId = user.user_id || user.id_user;
       const historyTable = document.getElementById("history_items");
       async function getRentals() {
-        const res = await fetch("http://localhost:5000/rentals");
+        const res = await fetch("https://rmjrentcar-86067911510.asia-southeast2.run.app/rentals");
         return await res.json();
       }
       async function getCars() {
-        const res = await fetch("http://localhost:5000/cars");
+        const res = await fetch("https://rmjrentcar-86067911510.asia-southeast2.run.app/cars");
         return await res.json();
       }
       async function buildHistory() {
@@ -123,7 +123,7 @@
       }
       window.cancelRental = async (rental_id) => {
         if (confirm("Yakin ingin membatalkan rental ini?")) {
-          await fetch(`http://localhost:5000/rentals/delete/${rental_id}`, {
+          await fetch(`https://rmjrentcar-86067911510.asia-southeast2.run.app/rentals/delete/${rental_id}`, {
             method: "DELETE",
           });
           buildHistory();
