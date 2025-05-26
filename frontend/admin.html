@@ -106,7 +106,7 @@
 
       const getCars = async () => {
         try {
-          const response = await fetch("http://localhost:5000/cars", {
+          const response = await fetch("https://rmjrentcar-86067911510.asia-southeast2.run.app/cars", {
             method: "GET",
           });
           if (!response.ok)
@@ -120,7 +120,7 @@
 
       const getRentals = async () => {
         try {
-          const response = await fetch("http://localhost:5000/rentals", {
+          const response = await fetch("https://rmjrentcar-86067911510.asia-southeast2.run.app/rentals", {
             method: "GET",
           });
           if (!response.ok)
@@ -134,7 +134,7 @@
 
       const getUsers = async () => {
         try {
-          const response = await fetch("http://localhost:5000/users", {
+          const response = await fetch("https://rmjrentcar-86067911510.asia-southeast2.run.app/users", {
             method: "GET",
           });
           if (!response.ok)
@@ -234,7 +234,7 @@
       };
       window.deleteCar = async (car_id) => {
         if (confirm("Yakin ingin menghapus mobil ini?")) {
-          await fetch(`http://localhost:5000/cars/delete/${car_id}`, {
+          await fetch(`https://rmjrentcar-86067911510.asia-southeast2.run.app/cars/delete/${car_id}`, {
             method: "DELETE",
           });
           buildCarTable();
@@ -246,7 +246,7 @@
       };
       window.deleteRental = async (rental_id) => {
         if (confirm("Yakin ingin menghapus rental ini?")) {
-          await fetch(`http://localhost:5000/rentals/delete/${rental_id}`, {
+          await fetch(`https://rmjrentcar-86067911510.asia-southeast2.run.app/rentals/delete/${rental_id}`, {
             method: "DELETE",
           });
           buildRentalTable();
