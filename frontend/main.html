@@ -161,7 +161,7 @@
 
       async function getCars() {
         try {
-          const res = await fetch("http://localhost:5000/cars");
+          const res = await fetch("https://rmjrentcar-86067911510.asia-southeast2.run.app/cars");
           if (!res.ok) throw new Error("Gagal mengambil data mobil");
           return await res.json();
         } catch (err) {
