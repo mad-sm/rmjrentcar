@@ -183,7 +183,7 @@
           password: document.getElementById("password").value,
         };
         try {
-          const res = await fetch("http://localhost:5000/login", {
+          const res = await fetch("https://rmjrentcar-86067911510.asia-southeast2.run.app/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(body),
