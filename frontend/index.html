@@ -104,7 +104,7 @@
       let carsData = [];
       const carGrid = document.getElementById("car_grid");
       async function getCars() {
-        const res = await fetch("http://localhost:5000/cars");
+        const res = await fetch("https://rmjrentcar-86067911510.asia-southeast2.run.app/cars");
         return await res.json();
       }
       function renderCars(list) {
